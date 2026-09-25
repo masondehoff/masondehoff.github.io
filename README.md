@@ -1,16 +1,19 @@
-## Hi there 👋
+# masondehoff.github.io
 
-<!--
-**masondehoff/masondehoff** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Source for my personal resume/portfolio site, live at [masondehoff.github.io](https://masondehoff.github.io).
 
-Here are some ideas to get you started:
+Built with Vite, React, TypeScript, Tailwind CSS, and Framer Motion. Deployed automatically to GitHub Pages via GitHub Actions on every push to `main`.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Development
+
+```bash
+npm install
+npm run dev       # local dev server
+npm run build     # production build to dist/
+npm run preview   # preview the production build locally
+npm run lint      # lint check
+```
+
+## Content
+
+Resume content (experience, education, skills, projects, contact info) lives in `src/data/` as plain data, separate from the components that render it — update it there rather than editing components directly.
