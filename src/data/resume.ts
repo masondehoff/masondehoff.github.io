@@ -128,7 +128,7 @@ export const projects: Project[] = [
     name: 'Personal Portfolio Website',
     description:
       'A single-page React portfolio site with scroll-synced navigation, a continuous scroll-progress ' +
-      'indicator, active-section tracking, and custom motion design — architected to keep resume content ' +
+      'indicator, active-section tracking, and custom motion design. Built to keep resume content ' +
       'separate from UI for easy maintenance.',
     tags: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion'],
     href: 'https://github.com/masondehoff/masondehoff.github.io',
@@ -146,7 +146,7 @@ export const leadership: LeadershipEntry[] = [
     role: 'Varsity Football Captain',
     period: 'Fall 2023',
     description:
-      'Voted unanimously by coaches and teammates to serve in this role — led teammates through adversity ' +
+      'Voted unanimously by coaches and teammates to serve in this role. Led teammates through adversity ' +
       'both on and off the field.',
   },
   {
