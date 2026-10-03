@@ -1,9 +1,22 @@
 import { motion } from 'framer-motion'
+import { useState } from 'react'
 import Section from './Section'
 import { fadeUp } from './motionVariants'
 import { contact, profile } from '../data/resume'
 
 export default function Contact() {
+  const [copied, setCopied] = useState(false)
+
+  const copyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(contact.email)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1800)
+    } catch {
+      window.location.href = `mailto:${contact.email}`
+    }
+  }
+
   return (
     <Section
       id="contact"
@@ -27,12 +40,13 @@ export default function Contact() {
           >
             GitHub
           </a>
-          <a
-            href={`mailto:${contact.email}`}
-            className="rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
+          <button
+            type="button"
+            onClick={copyEmail}
+            className="w-[220px] rounded-md bg-accent px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-accent/90"
           >
-            {contact.email}
-          </a>
+            {copied ? 'Copied to clipboard!' : contact.email}
+          </button>
           <a
             href={contact.linkedin}
             target="_blank"
